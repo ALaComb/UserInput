@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card" style="width: 30em" *ngFor="let user of users">
+      <div class="card-body">
+        <h3 class="card-title" style="text-align: center">{{user.firstname}} {{user.lastname}}</h3>
+        <div class="row" style="padding-top:2em">
+          <div class="col">
+            <b>Address:</b>
+          </div>
+          <div class="col" style="text-align:right">
+            {{user.address.toString()}}
+          </div>
+        </div>
+        <div class="row" style="padding-top:2em">
+          <div class="col">
+            <b>Phone:</b>
+          </div>
+          <div class="col" style="text-align:right">
+            {{user.phone}}
+          </div>
+        </div>
+        <div class="row" style="text-align:center; padding-top:2em">
+          <div class="col">
+            <a href="#" class="btn btn-primary">Update</a>
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

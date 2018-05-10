@@ -1,0 +1,16 @@
+<div class="container">
+  <h1> Log in to access User Data </h1>
+  <p> For testing purposes, credentials are admin:admin.</p>
+  <form>
+    <div class="form-group">
+      <label for="UserID">User ID</label>
+      <input type="email" class="form-control" id="UserID" placeholder="User ID" name="UserID" [(ngModel)]="userID">
+    </div>
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input type="password" class="form-control" id="Password" placeholder="Password" name="password" [(ngModel)]="password">
+    </div>
+    <p style="color:red"> {{message}} </p>
+    <button type="submit" class="btn btn-primary" (click)="verify()">Submit</button>
+  </form>
+</div>
