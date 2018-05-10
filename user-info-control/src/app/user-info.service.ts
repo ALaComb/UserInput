@@ -1,3 +1,5 @@
+// Currently breaks application due to an unknown StackTraceError
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
