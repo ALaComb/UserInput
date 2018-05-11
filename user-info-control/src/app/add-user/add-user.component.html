@@ -5,7 +5,7 @@
       <label>Name</label>
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="First name" name="firstname" [(ngModel)]="firstname"  >
+          <input type="text" class="form-control" placeholder="First name" name="firstname" [(ngModel)]="firstname">
         </div>
         <div class="col">
           <input type="text" class="form-control" placeholder="Last name" name="lastname" [(ngModel)]="lastname">
@@ -17,24 +17,24 @@
         <label>Address</label>
         <div class="row">
           <div class="col">
-            <input type="text" class="form-control" placeholder="Street">
+            <input type="text" class="form-control" placeholder="Street" [(ngModel)]="addressLineOne">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="Apt #">
+            <input type="text" class="form-control" placeholder="Apt #" [(ngModel)]="addressLineTwo">
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" class="form-control" placeholder="City/Town">
+            <input type="text" class="form-control" placeholder="City/Town" [(ngModel)]="city">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="State/Province">
+            <input type="text" class="form-control" placeholder="State/Province" [(ngModel)]="state">
           </div>
           <div class="col">
-              <input type="text" class="form-control" placeholder="ZIP / Postal Code">
+              <input type="text" class="form-control" placeholder="ZIP / Postal Code" [(ngModel)]="zip">
           </div>
           <div class="col">
-              <select name="country" class="form-control input-xlarge">
+              <select name="country" class="form-control input-xlarge" [(ngModel)]="country">
                   <option value="" selected="selected" disabled>(please select a country)</option>
                   <option value="AF">Afghanistan</option>
                   <option value="AL">Albania</option>
@@ -285,7 +285,17 @@
       <div class="row">
         <div class="col">
           <!-- Can check specific text formatting. Stretch Goal. -->
-          <input type="text" class="form-control" placeholder="Phone Number">
+          <input type="text" class="form-control" placeholder="Phone Number" [(ngModel)]="phone">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>User ID Number</label>
+      <div class="row">
+        <div class="col">
+          <!-- Can check specific text formatting. Stretch Goal. -->
+          <input type="text" class="form-control" placeholder="User ID Number" [(ngModel)]="userid">
         </div>
       </div>
     </div>

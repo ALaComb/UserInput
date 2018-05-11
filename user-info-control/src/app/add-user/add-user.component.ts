@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { UserData } from '../user-data';
 import { UserInfoService } from '../user-info.service';
 import { Router } from '@angular/router';
@@ -10,6 +10,7 @@ import { of } from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
 import { HttpHeaders } from '@angular/common/http';
 
+@Injectable()
 @Component({
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
@@ -41,12 +42,12 @@ export class AddUserComponent implements OnInit {
     const newUser = new UserData();
     newUser.firstname = this.firstname;
     newUser.lastname = this.lastname;
-    newUser.address.street = this.addressLineOne;
-    newUser.address.aptNum = this.addressLineTwo;
-    newUser.address.city = this.addressCity;
-    newUser.address.state = this.addressState;
-    newUser.address.ZIP = this.addressZip;
-    newUser.address.country = this.addressCountry;
+    newUser.addressLineOne = this.addressLineOne;
+    newUser.addressLineTwo = this.addressLineTwo;
+    newUser.city = this.addressCity;
+    newUser.state = this.addressState;
+    newUser.zip = this.addressZip;
+    newUser.country = this.addressCountry;
     newUser.phone = this.phoneNumber;
 
     this.service.add(newUser).subscribe(resp => {

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -8,6 +9,9 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { LoginComponent } from './login/login.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { NgModel, FormsModule } from '@angular/forms';
+import { UserData } from './user-data';
+import { UserInfoService } from './user-info.service';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,9 +24,10 @@ import { NgModel, FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [UserData, UserInfoService, HttpClient],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
